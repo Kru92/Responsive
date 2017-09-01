@@ -1,0 +1,153 @@
+$basic_font_size: 1.4814814814814814vmax;
+$font_size_caption: 2.962962962962963vmax;
+$font-stack: 'Open Sans', Arial, sans-serif;
+$fontColor: rgb(255,255,255);
+$fontColorCaptionLink: rgb(168,213,223);
+$basicLineHeight: $basic_font_size;
+$backgroundcolorHeader: rgb(55, 60, 63);
+$backgroundcolorMainCaption: rgb(21,176,195);
+$backgroundcolorMainLinkPDFTitle: rgb(39, 33, 44);
+$backgroundcolorMainLinkPDFLink: rgb(188,49,131);
+$backgroundcolorcontainerContainerForImg__link: rgb(91,15,161);
+$backgroundcolorTextContainer: rgb(235,235,235);
+@function get-vh($object) {
+    $vh: (768 * 0.01) * 1px;
+    @return ($object / $vh) * 1vmin;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url(reset.css);
+
+.body {
+  font-family: $font-stack;
+  font-size: $basic_font_size;
+  line-height: $basic_font_size;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+  color: $fontColor;
+}
+.header {
+  background-color: $backgroundcolorHeader;
+}
+.nav__list {
+  height: 9.25925925925926vmin;
+  display: inline-flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0;
+  font-size: $basic_font_size;
+  text-transform: uppercase;
+  color: $fontColor;
+  align-items: center;
+  padding: 0 get-vh(25px);
+}
+.nav__list-item {
+  padding-left: get-vh(25px);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $backgroundcolorMainCaption;
+  color: $fontColor;
+  height: 71.625925925925924vmin;
+  font-size: 9.35vmin;
+  padding: 0 7.4074074074074066vmin;
+  line-height: 10vmin;
+  flex-basis: auto;
+  flex-wrap: wrap;
+}
+.caption__link {
+  color: $fontColorCaptionLink;
+  font-size: 5.35vmin;
+  padding-top: 3.9407407407407405vmin;
+}
+.right {
+  width: 3.5vmin;
+  padding-left: 15.625vmin;
+}
+.linkPDF {
+  display: flex;
+  flex-direction: row;
+  height: 12.760416666666668vmin;
+  margin-bottom: get-vh(147px);
+}
+.linkPDF__title {
+  background-color: $backgroundcolorMainLinkPDFTitle;
+  margin: 0;
+  color: rgb(150,134,164);
+  font-size: 20px;
+  height: get-vh(245px);
+  flex: 1 2 get-vh(794px);
+  font-size: get-vh(36px);
+  font-weight: 600;
+  padding: get-vh(100px) 0 0 get-vh(85px);
+  line-height: get-vh(50px);
+}
+
+.linkPDF__link {
+  background-color: $backgroundcolorMainLinkPDFLink;
+  flex: 2 1 get-vh(230px);
+  height: get-vh(245px);
+  background-image: url(../img/right.svg);
+  background-repeat: no-repeat;
+  background-size: get-vh(90px) get-vh(90px);
+  background-position: center;
+}
+.containerForImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.containerForImg__link {
+  flex: 1 1 get-vh(341px);
+  background-image: url(../img/right.svg);
+  background-repeat: no-repeat;
+  background-size: get-vh(90px) get-vh(90px);
+  background-position: center;
+  background-color: $backgroundcolorcontainerContainerForImg__link;
+  height: get-vh(296px);
+}
+.img-wrap {
+  flex: 1 1 get-vh(341px);
+  height: get-vh(296px);
+}
+.containerForImg__img {
+  width: 100%;
+  height: 100%;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: get-vh(55px) get-vh(80px) get-vh(175px);
+  background-color: $backgroundcolorTextContainer;
+}
+.textContainer__caption {
+  font-size: get-vh(30px);
+  color: rgb(8,140,165);
+}
+.textContainer__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: get-vh(26px);
+  line-height: get-vh(35px);
+}
+.text__par:last-child {
+  padding-left: get-vh(60px);
+}
+.text__par p {
+  padding-top: get-vh(45px);
+}
